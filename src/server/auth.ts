@@ -87,6 +87,10 @@ export async function registerUser(
   role: string = "farmer",
   extra?: { organizationOrFarm?: string; location?: string; avatar?: string }
 ) {
+  email = email.trim().toLowerCase();
+  phone = phone.trim();
+  name = name.trim();
+
   const existing = await prisma.user.findFirst({
     where: { OR: [{ email }, { phone }] },
   });
@@ -125,8 +129,10 @@ export async function registerUser(
 
 // Login an existing user
 export async function loginUser(emailOrPhone: string, password: string) {
+  const identifier = emailOrPhone.trim();
+  const email = identifier.toLowerCase();
   const user = await prisma.user.findFirst({
-    where: { OR: [{ email: emailOrPhone }, { phone: emailOrPhone }] },
+    where: { OR: [{ email }, { phone: identifier }] },
   });
 
   if (!user) {

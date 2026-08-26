@@ -25,8 +25,8 @@ export interface GovernmentUpdate {
   tags: string[];
 }
 
-export const CATEGORIES: { label: string; value: UpdateCategory; icon: string }[] = [
-  { label: 'All', value: 'Schemes', icon: '📋' },
+export const CATEGORIES: { label: string; value: 'All' | UpdateCategory; icon: string }[] = [
+  { label: 'All', value: 'All', icon: '📋' },
   { label: 'Schemes', value: 'Schemes', icon: '🏛️' },
   { label: 'Subsidies', value: 'Subsidies', icon: '💰' },
   { label: 'Loans', value: 'Loans', icon: '🏦' },

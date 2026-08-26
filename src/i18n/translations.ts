@@ -189,7 +189,7 @@ const en = {
   'analyzer.uploadDesc': 'Get AI-powered quality assessment and market price estimates',
   'analyzer.chooseImage': 'Choose Image',
   'analyzer.camera': 'Take Photo with Camera',
-  'analyzer formats': 'Supports JPEG, PNG, WebP, GIF • Max 10MB',
+  'analyzer.formats': 'Supports JPEG, PNG, WebP, GIF • Max 10MB',
   'analyzer.readyToAnalyze': 'Ready to analyze',
   'analyzer.readyDesc': 'Our AI will identify the produce, assess quality grade (A–D), detect visible defects, and estimate current market prices in INR.',
   'analyzer.changeImage': 'Change Image',
